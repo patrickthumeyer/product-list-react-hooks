@@ -1,0 +1,90 @@
+@import "../../styles/_mixins";
+
+.wrapper-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  width: 700px;
+}
+
+.back-wrapper {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  &-arrow {
+    transform: rotate(180deg);
+    width: 20px;
+    margin: 10px 0 10px 10px;
+  }
+  &-headline {
+    font-size: 28px;
+    margin: 10px;
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &-image {
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+  }
+  &-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+  &-description {
+    line-height: 18px;
+  }
+  &-price {
+    font-size: 18px;
+    color: hotpink;
+    font-weight: bold;
+    margin: 0px 0px 10px 0px;
+  }
+}
+
+.button-wrapper-product {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  & button:first-child {
+    padding: 10px 20px;
+    @include cosmicFusionReverse;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  & button:last-child {
+    padding: 10px 20px;
+    @include cosmicFusion;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper-product {
+    width: 90vw;
+  }
+
+  .product-card-image {
+    width: 100%;
+  }
+}

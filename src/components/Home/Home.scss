@@ -1,0 +1,81 @@
+@import "../../styles/_mixins";
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 70vw;
+}
+
+.header {
+  width: 100%;
+  height: 120px;
+  color: white;
+  @include cosmicFusion;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 20px;
+  & .button {
+    padding: 10px 20px;
+    @include cosmicFusionReverse;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+.top-card {
+  background-color: #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 32vw;
+  height: 120px;
+  position: relative;
+  margin: 20px 30px 20px 0;
+  border-radius: 10px;
+  text-decoration: none;
+  & span {
+    color: black;
+  }
+  &-image {
+    width: 80px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+    margin-right: 20px;
+    margin-left: 40px;
+  }
+}
+
+.price {
+  position: absolute;
+  top: -18px;
+  right: -15px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  @include cosmicFusion;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  transition: 0.2s;
+  border: 2px solid hotpink;
+  &:hover {
+    transform: rotate(20deg);
+  }
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    margin-top: 40px;
+  }
+  .top-card {
+    width: 100%;
+  }
+}
